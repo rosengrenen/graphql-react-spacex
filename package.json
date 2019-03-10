@@ -1,0 +1,25 @@
+{
+  "name": "graphql-react-spacex",
+  "version": "0.0.0",
+  "private": true,
+  "description": "\"# graphql-react-spacex\"",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "dev": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feareoc/graphql-react-spacex.git"
+  },
+  "author": "Rasmus Rosengren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/feareoc/graphql-react-spacex/issues"
+  },
+  "homepage": "https://github.com/feareoc/graphql-react-spacex#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
