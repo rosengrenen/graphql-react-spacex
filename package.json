@@ -2,9 +2,10 @@
   "name": "graphql-react-spacex",
   "version": "0.0.0",
   "private": true,
-  "description": "\"# graphql-react-spacex\"",
+  "description": "",
   "main": "index.js",
   "scripts": {
+    "install": "concurrently \"cd client && npm i\" \"cd server && npm i\"",
     "client": "cd client && npm start",
     "server": "cd server && npm start",
     "dev": "concurrently \"npm run client\" \"npm run server\""
