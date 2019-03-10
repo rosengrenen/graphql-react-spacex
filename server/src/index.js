@@ -23,9 +23,16 @@ const typeDefs = gql `
     rocket_type: String
   }
 
+  type Image {
+    id: ID
+    pageURL: String
+    webformatURL: String
+  }
+
   type Query {
     launches: [Launch],
     launch(flight_number: ID): Launch,
+    images(query: String): [Image]
   }
 `;
 
@@ -39,6 +46,11 @@ const resolvers = {
       flight_number
     }) => {
       return axios.get(`https://api.spacexdata.com/v3/launches/${flight_number}`).then(result => result.data);
+    },
+    images: (_, {
+      query
+    }) => {
+      return axios.get(`https://pixabay.com/api/?key=11839652-520d7a2c639e74c15069c464d&q=${query}&image_type=photo&per_page=100`).then(result => result.data.hits);
     }
   },
 };
